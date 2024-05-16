@@ -1,5 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Icon } from '../../../icon/icon';
+import { Icon, Button } from '../../../index';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+	selectUserLogin,
+	selectUserRole,
+	selectUserSession,
+} from '../../../../selectors';
+import { ROLE } from '../../../../constants/role';
+import { logout } from '../../../../actions';
 import styled from 'styled-components';
 
 const RightAligned = styled.div`
@@ -7,32 +15,49 @@ const RightAligned = styled.div`
 	justify-content: flex-end;
 `;
 
-const StyledLink = styled(Link)`
-	font-size: 18px;
-	width: 100px;
-	height: 32px;
-	border: 1px solid #000;
+const StyledLogoutContainer = styled.div`
+	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	background-color: #eee;
-`;
-
-const StyledBackButton = styled.div`
-	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
 `;
 
 const ControlPanelContainer = ({ className }) => {
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const roleId = useSelector(selectUserRole);
+	const login = useSelector(selectUserLogin);
+	const session = useSelector(selectUserSession);
 	return (
 		<div className={className}>
 			<RightAligned>
-				<StyledLink to="/login">Войти</StyledLink>
+				{roleId === ROLE.GUEST ? (
+					<Button>
+						<Link to="/login">Войти</Link>
+					</Button>
+				) : (
+					<StyledLogoutContainer>
+						<div>{login}</div>
+						<Icon
+							id="fa-sign-out"
+							size="24px"
+							onClick={() => {
+								dispatch(logout(session));
+								navigate('/');
+							}}
+						/>
+					</StyledLogoutContainer>
+				)}
 			</RightAligned>
 			<RightAligned>
-				<StyledBackButton onClick={() => navigate(-1)}>
-					<Icon id="fa-backward" size="24px" margin="10px 0 0 0" />
-				</StyledBackButton>
+				<Icon
+					id="fa-backward"
+					size="24px"
+					margin="10px 0 0 0"
+					onClick={() => navigate(-1)}
+				/>
 				<Link to="/post">
 					<Icon id="fa-file-text-o" size="24px" margin="10px 0 0 16px" />
 				</Link>

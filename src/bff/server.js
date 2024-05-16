@@ -1,8 +1,11 @@
-import { getUser, createSession, addUser } from './index';
+import { getUser, addUser, sessions } from './index';
 
 export const server = {
+	async logout(session) {
+		sessions.remove(session);
+	},
 	async authorize(authLogin, authPassword) {
-		const user = getUser(authLogin);
+		const user = await getUser(authLogin);
 
 		if (!user) {
 			return {
@@ -20,7 +23,12 @@ export const server = {
 
 		return {
 			error: null,
-			response: createSession(user.role_id),
+			response: {
+				id: user.id,
+				login: user.login,
+				roleId: user.roleId,
+				session: sessions.create(user),
+			},
 		};
 	},
 
@@ -38,7 +46,12 @@ export const server = {
 
 		return {
 			error: null,
-			response: createSession(user.role_id),
+			response: {
+				id: user.id,
+				login: user.login,
+				roleId: user.roleId,
+				session: sessions.create(user),
+			},
 		};
 	},
 };
