@@ -22,6 +22,9 @@ const StyledLogoutContainer = styled.div`
 	align-items: center;
 	font-size: 18px;
 	font-weight: bold;
+	i {
+		margin-left: 8px;
+	}
 `;
 
 const ControlPanelContainer = ({ className }) => {

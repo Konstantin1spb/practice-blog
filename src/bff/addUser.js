@@ -1,3 +1,4 @@
+import { ROLE } from '../constants/role';
 import { generateDate } from './generateDate';
 
 export const addUser = (login, password) =>
@@ -10,6 +11,6 @@ export const addUser = (login, password) =>
 			login,
 			password,
 			registered_at: generateDate(),
-			role_id: 2,
+			role_id: ROLE.GUEST,
 		}),
-	});
+	}).then((createdUser) => createdUser.json());
