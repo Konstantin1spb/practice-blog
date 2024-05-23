@@ -1,18 +1,11 @@
 {
   "users": [
     {
-      "id": "001",
+      "id": "8197",
       "login": "Kostya",
       "password": "kostya0408",
-      "registered_at": "2028-02-22",
+      "registered_at": "2057-03-26 04:16",
       "role_id": 0
-    },
-    {
-      "id": "38b2",
-      "login": "Konstantin1spb",
-      "password": "123456",
-      "registered_at": "2053-03-14 08:29",
-      "role_id": 3
     }
   ],
   "roles": [
