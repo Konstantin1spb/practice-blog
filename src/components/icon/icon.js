@@ -12,4 +12,5 @@ export const Icon = styled(IconContainer)`
 	line-height: ${({ lineheight }) => lineheight};
 	color: ${({ disabled }) => (disabled ? '#ccc;' : '#000;')}
 	cursor: ${({ disabled }) => (disabled ? 'default;' : 'pointer;')}
+	cursor: ${({ noPointer }) => (noPointer ? 'default;' : 'pointer;')}
 `;
