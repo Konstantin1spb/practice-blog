@@ -14,6 +14,9 @@ const CommentsContainer = ({ className, comments, postId }) => {
 	const requestServer = useServerRequest();
 
 	const onNewCommentAdd = (requestServer, userLogin, postId, content) => {
+		if (!content) {
+			return;
+		}
 		dispatch(addCommentAsync(requestServer, userLogin, postId, content));
 		setNewComment('');
 	};
@@ -30,6 +33,7 @@ const CommentsContainer = ({ className, comments, postId }) => {
 					id="fa-paper-plane-o"
 					size="18px"
 					margin="0 0 0 10px"
+					height="18px"
 					onClick={() =>
 						onNewCommentAdd(requestServer, userLogin, postId, newComment)
 					}
@@ -39,6 +43,7 @@ const CommentsContainer = ({ className, comments, postId }) => {
 				{comments.map(({ id, author, publishedAt, content }) => (
 					<Comment
 						key={id}
+						postId={postId}
 						id={id}
 						author={author}
 						publishedAt={publishedAt}

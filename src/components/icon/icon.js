@@ -10,7 +10,8 @@ export const Icon = styled(IconContainer)`
 	font-size: ${({ size }) => size};
 	margin: ${({ margin }) => margin};
 	line-height: ${({ lineheight }) => lineheight};
-	color: ${({ disabled }) => (disabled ? '#ccc;' : '#000;')}
-	cursor: ${({ disabled }) => (disabled ? 'default;' : 'pointer;')}
-	cursor: ${({ noPointer }) => (noPointer ? 'default;' : 'pointer;')}
+	height: ${({ height }) => height};
+	color: ${({ disabled }) => (disabled ? '#ccc;' : '#000;')};
+	cursor: ${({ disabled }) => (disabled ? 'default;' : 'pointer;')};
+	cursor: ${({ noPointer }) => (noPointer ? 'default;' : 'pointer;')};
 `;

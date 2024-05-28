@@ -100,31 +100,39 @@
   ],
   "comments": [
     {
-      "id": "bc4d",
+      "id": "610a",
       "author_login": "Kostya",
       "post_id": "001",
-      "published_at": "2048-01-01 22:32",
-      "content": "Комментарий"
-    },
-    {
-      "id": "c15a",
-      "author_login": "Konstantin1spb",
-      "post_id": "001",
-      "published_at": "2053-05-12 22:58",
-      "content": "Я тоже прокоменчу"
-    },
-    {
-      "id": "57fd",
-      "author_login": "Kostya",
-      "post_id": "001",
-      "published_at": "2046-04-15 09:13",
-      "content": "Еще один комментарий"
+      "published_at": "2064-10-14 05:12",
+      "content": "dfdf"
     }
   ],
   "sessions": [
     {
       "id": "eeeb",
       "hash": "0.06892005380125665325863337784539908170700073242188",
+      "user": {
+        "id": "8197",
+        "login": "Kostya",
+        "password": "kostya0408",
+        "registeredAt": "2057-03-26 04:16",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "98a1",
+      "hash": "0.07037594047290829379903698281850665807723999023438",
+      "user": {
+        "id": "8197",
+        "login": "Kostya",
+        "password": "kostya0408",
+        "registeredAt": "2057-03-26 04:16",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "a73c",
+      "hash": "0.21467110970814640147352747590048238635063171386719",
       "user": {
         "id": "8197",
         "login": "Kostya",
