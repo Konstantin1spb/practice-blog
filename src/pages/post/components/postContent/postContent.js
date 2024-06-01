@@ -13,13 +13,13 @@ const PostContentContainer = ({
 			<img src={imageUrl} alt={title}></img>
 			<H2>{title}</H2>
 			<SpecialPanel
+				id={id}
 				publishedAt={publishedAt}
 				margin="-20px 0 20px"
 				editButton={
 					<Icon
 						id="fa-pencil-square-o"
 						size="21px"
-						margin="0 10px 0 0"
 						onClick={() => navigate(`/post/${id}/edit`)}
 					/>
 				}
@@ -33,5 +33,6 @@ export const PostContent = styled(PostContentContainer)`
 	img {
 		float: left;
 		margin: 0 20px 10px 0;
+		max-width: 280px;
 	}
 `;
