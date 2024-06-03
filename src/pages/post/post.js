@@ -28,8 +28,6 @@ const PostContainer = ({ className }) => {
 
 	const post = useSelector(selectPost);
 
-	console.log(post);
-
 	return (
 		<div className={className}>
 			{isCreating || isEditing ? (
