@@ -18,4 +18,5 @@ export const Button = styled(ButtonContainer)`
 	align-items: center;
 	background-color: #eee;
 	cursor: pointer;
+	opacity: ${({ disabled }) => (disabled ? '0.2' : '1')};
 `;
