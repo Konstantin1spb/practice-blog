@@ -19,7 +19,7 @@
       "login": "LuckyNumber",
       "password": "123456",
       "registered_at": "2061-04-19 16:07",
-      "role_id": 3
+      "role_id": 1
     }
   ],
   "roles": [
@@ -191,25 +191,25 @@
       "content": "dghdgh"
     },
     {
-      "id": "b23c",
-      "author_login": "Kostya",
-      "post_id": "003",
-      "published_at": "2040-04-02 23:06",
-      "content": "dghdgh\n\n"
-    },
-    {
-      "id": "f947",
-      "author_login": "Kostya",
-      "post_id": "003",
-      "published_at": "2046-04-05 05:05",
-      "content": "hgdhdgh"
-    },
-    {
       "id": "25b7",
       "author_login": "Kostya",
       "post_id": "7ac1",
       "published_at": "2041-07-02 22:45",
       "content": "красивая\n"
+    },
+    {
+      "author_login": "LuckyNumber",
+      "post_id": "003",
+      "published_at": "2050-11-13 09:47",
+      "content": "Hello\n",
+      "id": "JSHEMZU"
+    },
+    {
+      "author_login": "Konstantin1spb",
+      "post_id": "003",
+      "published_at": "2057-05-17 11:56",
+      "content": "privet",
+      "id": "vyKL0ov"
     }
   ],
   "sessions": [
@@ -245,6 +245,17 @@
         "registeredAt": "2057-03-26 04:16",
         "roleId": 0
       }
+    },
+    {
+      "hash": "0.58688016423587385794746751344064250588417053222656",
+      "user": {
+        "id": "57b7",
+        "login": "Konstantin1spb",
+        "password": "123456",
+        "registeredAt": "2045-04-27 12:16",
+        "roleId": 2
+      },
+      "id": "BXBiH05"
     }
   ]
 }

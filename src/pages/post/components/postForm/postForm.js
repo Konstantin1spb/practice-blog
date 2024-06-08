@@ -82,4 +82,8 @@ export const PostForm = styled(PostFormContainer)`
 		border: 1.5px solid #000;
 		white-space: pre-line;
 	}
+
+	input {
+		margin-bottom: 10px;
+	}
 `;
