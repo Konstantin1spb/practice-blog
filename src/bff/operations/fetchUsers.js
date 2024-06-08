@@ -9,7 +9,7 @@ export const fetchUsers = async (hash) => {
 
 	if (!access) {
 		return {
-			error: 'Оставлять комментарии могут только авторизованные пользователи.',
+			error: 'Доступ запрещен.',
 			response: null,
 		};
 	}

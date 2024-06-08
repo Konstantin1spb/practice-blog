@@ -21,37 +21,39 @@ const CommentsContainer = ({ className, comments, postId }) => {
 		setNewComment('');
 	};
 	return (
-		<div className={className}>
-			<div className="new-comment">
-				<textarea
-					name="comment"
-					value={newComment}
-					placeholder="Комментарий..."
-					onChange={({ target }) => setNewComment(target.value)}
-				></textarea>
-				<Icon
-					id="fa-paper-plane-o"
-					size="18px"
-					margin="0 0 0 10px"
-					height="18px"
-					onClick={() =>
-						onNewCommentAdd(requestServer, userLogin, postId, newComment)
-					}
-				/>
-			</div>
-			<div className="comments">
-				{comments.map(({ id, author, publishedAt, content }) => (
-					<Comment
-						key={id}
-						postId={postId}
-						id={id}
-						author={author}
-						publishedAt={publishedAt}
-						content={content}
+		postId && (
+			<div className={className}>
+				<div className="new-comment">
+					<textarea
+						name="comment"
+						value={newComment}
+						placeholder="Комментарий..."
+						onChange={({ target }) => setNewComment(target.value)}
+					></textarea>
+					<Icon
+						id="fa-paper-plane-o"
+						size="18px"
+						margin="0 0 0 10px"
+						height="18px"
+						onClick={() =>
+							onNewCommentAdd(requestServer, userLogin, postId, newComment)
+						}
 					/>
-				))}
+				</div>
+				<div className="comments">
+					{comments.map(({ id, author, publishedAt, content }) => (
+						<Comment
+							key={id}
+							postId={postId}
+							id={id}
+							author={author}
+							publishedAt={publishedAt}
+							content={content}
+						/>
+					))}
+				</div>
 			</div>
-		</div>
+		)
 	);
 };
 
