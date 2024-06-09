@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { openModal, CLOSE_MODAL, removePostAsync } from '../../../../actions';
@@ -39,7 +40,12 @@ const SpecialPanelContainer = ({ className, id, publishedAt, editButton }) => {
 		<div className={className}>
 			<div className="published-at">
 				{publishedAt && (
-					<Icon id="fa-calendar-o" size="18px" margin="0 10px 0 0" nopointer />
+					<Icon
+						id="fa-calendar-o"
+						size="18px"
+						margin="0 10px 0 0"
+						nopointer={true}
+					/>
 				)}
 				{publishedAt}
 			</div>
@@ -76,3 +82,9 @@ export const SpecialPanel = styled(SpecialPanelContainer)`
 		align-items: center;
 	}
 `;
+
+SpecialPanel.propTypes = {
+	id: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+	editButton: PropTypes.node.isRequired,
+};

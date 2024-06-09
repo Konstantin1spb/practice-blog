@@ -6,6 +6,7 @@ import { useServerRequest } from '../../../../hooks';
 import { SpecialPanel } from '../specialPanel.js/specialPanel';
 import { sanitizeContent } from './utils';
 import { savePostAsync } from '../../../../actions';
+import { PROP_TYPE } from '../../../../constants';
 import styled from 'styled-components';
 
 const PostFormContainer = ({
@@ -87,3 +88,7 @@ export const PostForm = styled(PostFormContainer)`
 		margin-bottom: 10px;
 	}
 `;
+
+PostForm.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
+};

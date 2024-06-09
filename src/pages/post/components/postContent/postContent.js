@@ -1,6 +1,7 @@
 import { H2, Icon } from '../../../../components';
 import { SpecialPanel } from '../specialPanel.js/specialPanel';
 import { useNavigate } from 'react-router-dom';
+import { PROP_TYPE } from '../../../../constants';
 import styled from 'styled-components';
 
 const PostContentContainer = ({
@@ -36,3 +37,7 @@ export const PostContent = styled(PostContentContainer)`
 		max-width: 280px;
 	}
 `;
+
+PostContent.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
+};

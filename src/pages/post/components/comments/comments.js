@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Icon } from '../../../../components';
 import { Comment } from './components';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUserLogin, selectUserRole } from '../../../../selectors';
-import { ROLE } from '../../../../constants';
+import { PROP_TYPE, ROLE } from '../../../../constants';
 import { addCommentAsync } from '../../../../actions';
 import { useServerRequest } from '../../../../hooks';
 import styled from 'styled-components';
@@ -90,3 +91,8 @@ export const Comments = styled(CommentsContainer)`
 		border-radius: 2px;
 	}
 `;
+
+Comments.propTypes = {
+	comments: PropTypes.arrayOf(PROP_TYPE.COMMENT).isRequired,
+	postId: PropTypes.string.isRequired,
+};

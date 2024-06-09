@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Button, Icon } from '../../../../components';
 
@@ -44,3 +45,9 @@ export const Pagination = styled(PaginationContainer)`
 		font-weight: 600;
 	}
 `;
+
+Pagination.propTypes = {
+	page: PropTypes.number.isRequired,
+	lastPage: PropTypes.number.isRequired,
+	setPage: PropTypes.func.isRequired,
+};

@@ -20,23 +20,30 @@
       "password": "123456",
       "registered_at": "2061-04-19 16:07",
       "role_id": 1
+    },
+    {
+      "login": "fm107metro",
+      "password": "123456",
+      "registered_at": "2034-10-27 04:42",
+      "role_id": 2,
+      "id": "u2cMGpg"
     }
   ],
   "roles": [
     {
-      "id": "0",
+      "id": 0,
       "name": "Администратор"
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "Модератор"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Читатель"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Гость"
     }
   ],
@@ -166,6 +173,13 @@
       "title": "ааааа",
       "content": "ааааааа",
       "id": "LIFFrV2"
+    },
+    {
+      "image_url": "https://lipsum.app/280x150",
+      "published_at": "2043-04-01 17:35",
+      "title": "d;ljg;kljsdgf",
+      "content": "sarh'asl;fdhk'las,kfh",
+      "id": "R42OfpJ"
     }
   ],
   "comments": [
@@ -256,6 +270,28 @@
         "roleId": 2
       },
       "id": "BXBiH05"
+    },
+    {
+      "hash": "0.06482112473590428969316690199775621294975280761719",
+      "user": {
+        "id": "8197",
+        "login": "Kostya",
+        "password": "kostya0408",
+        "registeredAt": "2057-03-26 04:16",
+        "roleId": 0
+      },
+      "id": "dCV9flN"
+    },
+    {
+      "hash": "0.67086232517085275794954668526770547032356262207031",
+      "user": {
+        "id": "8197",
+        "login": "Kostya",
+        "password": "kostya0408",
+        "registeredAt": "2057-03-26 04:16",
+        "roleId": 0
+      },
+      "id": "7YM_QKx"
     }
   ]
 }

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Icon } from '../../../../components';
 import styled from 'styled-components';
@@ -18,11 +19,11 @@ const PostCardContainer = ({
 					<h4>{title}</h4>
 					<div className="post-card-info">
 						<div className="published-at">
-							<Icon id="fa-calendar-o" size="18px" nopointer />
+							<Icon id="fa-calendar-o" size="18px" nopointer={true} />
 							{publishedAt}
 						</div>
 						<div className="comments-count">
-							<Icon id="fa-comment-o" size="18px" nopointer />
+							<Icon id="fa-comment-o" size="18px" nopointer={true} />
 							{commentsCount}
 						</div>
 					</div>
@@ -57,3 +58,11 @@ export const PostCard = styled(PostCardContainer)`
 		gap: 7px;
 	}
 `;
+
+PostCard.propTypes = {
+	id: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+	imageUrl: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+	commentsCount: PropTypes.number.isRequired,
+};
